@@ -1,24 +1,6 @@
 import React from 'react';
+import RandomColor from './RandomColor.jsx';
 
-class RandomColor extends Component {
-  state = {
-    lastColor: '',
-    color: 'black',
-  };
-
-  getColor() {
-    const colors = [
-      'red',
-      'orange',
-      'yellow',
-      'green',
-      'blue',
-    ];
-
-    return colors[Math.round(Math.abs(Math.random() * colors.length - 1))];
-  }
-
-  handleColorChange() {
-    const color = this.getColor();
-  }
+export default function App() {
+  return <RandomColor />;
 }
