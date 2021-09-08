@@ -3,7 +3,7 @@ import Display from './Display';
 
 class RandomColor extends Component {
   state = {
-    lastColor: '',
+    lastColor: 'none',
     color: 'green',
   };
 
@@ -30,7 +30,7 @@ class RandomColor extends Component {
   render() {
     return (
       <>
-        <Display color={this.state.color}></Display>
+        <Display color={this.state.color} lastColor={this.state.lastColor}></Display>
       </>
     );
   }
